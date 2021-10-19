@@ -1,0 +1,17 @@
+﻿@model IEnumerable<MusicBox.ViewModels.GenresViewModel>
+
+@{
+    ViewBag.Title = "title";
+    
+}
+
+<h2>Выбери</h2>
+@{ var counter = 1; }
+@foreach (var item in Model)
+{
+    <label class="container">@item.Name
+        <input type="radio" name="genre @counter" value="@counter"/>
+        <span class="checkmark"></span>
+    </label>
+    counter += 1;
+}

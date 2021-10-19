@@ -1,0 +1,30 @@
+﻿@model MusicBox.Domain.User.UserModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+</head>
+<body>
+<div>
+    <a class="" asp-controller="Account" asp-action="Edit" asp-route-id="@Model.Id">Редактировать профиль</a>
+</div>
+
+<div>
+    <a asp-controller="Account" asp-action="EditPassword" asp-route-id="@Model.Id">Сменить пароль</a>
+</div>
+
+<div>
+    <a asp-controller="Account" asp-action="EditGenres">Выбрать жанры</a>
+</div>
+
+<div>
+    <form asp-action="Logout" asp-controller="Account">
+        <input class="btn-outline-dark" type="submit" value="Выход"/>
+    </form>
+</div>
+</body>
+</html>
